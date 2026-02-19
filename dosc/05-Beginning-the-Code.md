@@ -59,4 +59,65 @@ The user interface is implemented using Razor Views and shared layouts to ensure
 
 Navigation remains persistent across views, allowing users to move between features seamlessly while maintaining application state.
 
+---
 
+## 5. Code Modules and Application Structure
+
+### **Directory Structure Overview**
+
+| Module | Purpose |
+| :--- | :--- |
+| **Controllers** | Handle HTTP requests and application logic |
+| **Models** | Represent database entities and rules |
+| **Views** | Render UI using Razor templates |
+| **Data** | Contains database context and migrations |
+| **wwwroot** | Stores static assets (CSS, JS, images) |
+| **appsettings.json** | Stores configuration settings |
+| **Program.cs** | Configures application startup |
+
+### **Application Flow**
+User Interaction → Controller → Model → Database → View Response  
+
+This modular structure supports scalability and simplifies feature development.
+
+---
+
+## 6. Platform and Hosting Environment
+
+### **Local Development Requirements**
+* Visual Studio with ASP.NET workload  
+* .NET SDK  
+* SQL Server LocalDB  
+* Git  
+
+### **Local Setup Process**
+1. Clone repository from GitHub  
+2. Open solution in Visual Studio  
+3. Verify connection string in appsettings.json  
+4. Open Package Manager Console  
+5. Run `Update-Database`  
+6. Build and run the application  
+
+### **Cloud Deployment**
+The application is hosted on Azure App Service, allowing remote access for testing while maintaining a local development workflow.
+
+---
+
+## 7. Development Workflow and Continuity
+
+Version control is managed through GitHub using a branching workflow.
+
+* Developers create feature branches  
+* Changes are committed locally  
+* Pull requests are submitted for review  
+* Code is merged after approval  
+
+This workflow ensures collaboration, version tracking, and code stability.
+
+---
+
+## 8. System Readiness Summary
+
+The TriFalcon Fitness application successfully builds and runs within the configured development environment. Database connectivity has been verified through Entity Framework migrations, confirming the schema is up to date. The architecture supports continued feature development and collaborative workflows.
+
+---
